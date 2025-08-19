@@ -17,14 +17,15 @@
 
     "checkJs": true,
 
-    // FIXME: "esModuleInterop": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     // end copy
 
     "resolveJsonModule": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "target": "es2021",
+    // old - "target": "es2021",
+    "target": "esnext",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noEmit": true,

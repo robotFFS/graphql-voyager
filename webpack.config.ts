@@ -6,7 +6,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import type { ExternalItemFunctionData } from 'webpack';
 import webpack from 'webpack';
 
-import packageJSON from './package.json' with { type: 'json' };
+import packageJSON from './package.json';// with { type: 'json' };
 const BANNER = `GraphQL Voyager - Represent any GraphQL API as an interactive graph
 -------------------------------------------------------------
   Version: ${packageJSON.version}
@@ -21,7 +21,8 @@ const baseConfig: webpack.Configuration = {
     alias: { '../../worker': '../../worker-dist' },
   },
   output: {
-    path: path.join(import.meta.dirname, 'dist'),
+    //path: path.join(import.meta.dirname, 'dist'),
+    path: path.join('/home/ubuntu/graphql-voyager/dist'),
     sourceMapFilename: '[file].map',
     library: 'GraphQLVoyager',
     libraryTarget: 'umd',
@@ -121,7 +122,8 @@ const config: Array<webpack.Configuration> = [
     devServer: {
       port: 9090,
       static: {
-        directory: path.join(import.meta.dirname, 'demo'),
+        //directory: path.join(import.meta.dirname, 'demo'),
+	directory: path.join('/home/ubuntu/graphql-voyager/demo'),
       },
       liveReload: true,
     },

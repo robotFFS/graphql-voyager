@@ -1,4 +1,4 @@
-import * as svgPanZoom from 'svg-pan-zoom';
+import svgPanZoom from 'svg-pan-zoom';
 
 import { typeNameToId } from '../introspection/utils';
 import { stringToSvg } from '../utils/dom-helpers';
